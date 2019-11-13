@@ -1,5 +1,22 @@
 <h1>Dashboard</h1>
 
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Count</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Products</td>
+      <td><%= @categories.all.size %></td>
+    </tr>
+    <tr>
+      <td>Categories</td>
+      <td><%= @products.all.size %></td>
+    </tr>
+  </tbody>
+</table>
 
-<p># of products: <%= @categories.all.size %></p>
-<p># of categories: <%= @products.all.size %></p>
+<%= link_to "View Inventory", admin_products_path, class: 'btn btn-lg btn-primary' %>
