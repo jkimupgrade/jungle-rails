@@ -1,4 +1,4 @@
-<article class="product">
+<article class="product">  
   <header>
     <%= link_to product do %>
       <%= image_tag product.image.thumb, alt: product.name %>
@@ -21,7 +21,8 @@
     <%= humanized_money_with_symbol product.price %>
   </aside>
 
-  <aside class='sold-out'>
+  <aside class='sold-out' <% if product.quantity === 0 %>style='visibility: visible;'<% end %>>
     SOLD OUT!
   </aside>
+
 </article>
