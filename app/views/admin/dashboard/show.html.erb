@@ -5,18 +5,19 @@
     <tr>
       <th scope="col"></th>
       <th scope="col">Count</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Products</td>
-      <td><%= @categories.all.size %></td>
+      <td><b>Products</b></td>
+      <td><%= @products.all.size %></td>
+      <td><%= link_to 'View Products', admin_products_path, class: 'btn btn-md btn-primary' %>
     </tr>
     <tr>
-      <td>Categories</td>
-      <td><%= @products.all.size %></td>
+      <td><b>Categories</b></td>
+      <td><%= @categories.all.size %></td>
+      <td><%= link_to 'View Categories', admin_categories_path, class: 'btn btn-md btn-primary' %>
     </tr>
   </tbody>
 </table>
-
-<%= link_to "View Inventory", admin_products_path, class: 'btn btn-lg btn-primary' %>
