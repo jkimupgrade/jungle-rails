@@ -4,7 +4,7 @@ ruby "2.3.5"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', '0.20'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -30,7 +30,7 @@ gem 'puma'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
-gem 'money-rails'
+gem 'money-rails', '1.12'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'stripe'
