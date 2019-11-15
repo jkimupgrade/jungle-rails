@@ -1,23 +1,25 @@
 <h1>Dashboard</h1>
 
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Count</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><b>Products</b></td>
-      <td><%= @products.all.size %></td>
-      <td><%= link_to 'View Products', admin_products_path, class: 'btn btn-md btn-primary' %>
-    </tr>
-    <tr>
-      <td><b>Categories</b></td>
-      <td><%= @categories.all.size %></td>
-      <td><%= link_to 'View Categories', admin_categories_path, class: 'btn btn-md btn-primary' %>
-    </tr>
-  </tbody>
-</table>
+<div style='width: 50%;'>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">#</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><b>Products</b></td>
+        <td><%= @products.all.size %></td>
+        <td><%= link_to 'View Products', admin_products_path, class: 'btn btn-md btn-primary' %>
+      </tr>
+      <tr>
+        <td><b>Categories</b></td>
+        <td><%= @categories.all.size %></td>
+        <td><%= link_to 'View Categories', admin_categories_path, class: 'btn btn-md btn-primary' %>
+      </tr>
+    </tbody>
+  </table>
+</div>
