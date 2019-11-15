@@ -1,11 +1,19 @@
 <h1>Signup!</h1>
-  <br>
-  <%= form_for :user, url: '/users' do |f| %>
-    <div class='form-group'>
-      Name: <%= f.text_field :name, class: 'form-control', placeholder: 'Enter your name' %><br>
-      Email: <%= f.text_field :email, class: 'form-control', type: 'email', placeholder: 'Enter your email' %><br>
-      Password: <%= f.password_field :password , class: 'form-control', type: 'password', placeholder: 'Enter your password' %><br>
-      Password Confirmation: <%= f.password_field :password_confirmation, class: 'form-control', type: 'password', placeholder: 'Re-enter your password' %><br>
-      <%= f.submit "Submit", class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+<br>
+<%= form_for :user, url: '/users' do |f| %>
+  <div class='form-group' style="width: 50%;">
+    Name: <%= f.text_field :name, class: 'form-control',
+      placeholder: 'Enter your name' %>
+      <br>
+    Email: <%= f.text_field :email, class: 'form-control',
+      type: 'email', placeholder: 'Enter your email' %>
+      <br>
+    Password: <%= f.password_field :password , class: 'form-control',
+      type: 'password', placeholder: 'Enter your password' %>
+      <br>
+    Password Confirmation: <%= f.password_field :password_confirmation, class: 'form-control',
+      type: 'password', placeholder: 'Re-enter your password' %>
+      <br>
+    <%= f.submit "Submit", class: 'btn btn-primary' %>
+  </div>
+<% end %>
