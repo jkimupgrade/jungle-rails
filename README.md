@@ -3,10 +3,10 @@
 A mini e-commerce application built with `Rails 4.2` and tested with `RSpec`.
 
 ## Features
-- Add items to cart and checkout with __Stripe API__
+- Add items to cart and checkout with `Stripe API`
 - Display a red 'Sold Out!' marker when product quantity is zero
 - Display active sale on every page (e.g. Black Friday)
-- Admin access control with __http_basic_authenticate_with__
+- Admin access control with `http_basic_authenticate_with`
 - Admin dashboard with counts of categories and products in database
 - Admin can create new categories and products
 - Admin can create new sales
