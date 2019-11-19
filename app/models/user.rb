@@ -8,4 +8,15 @@ class User < ActiveRecord::Base
   validates :password_confirmation, presence: true
   validates :email, presence: true, uniqueness: true
 
+
+  def authenticate_with_credentials(email, password)
+    user = User.find_by_email(email)
+
+    if user && user.authenticate(password)
+      user
+    else
+      nil
+    end
+
+  end
 end

@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe User, type: :model do
   
@@ -54,6 +55,22 @@ RSpec.describe User, type: :model do
       expect(@user.errors.full_messages).to include("Password is too short (minimum is 8 characters)")
     end
 
+  end
+
+  describe '.authenticate_with_credentials' do
+    it 'successful authentication' do
+      @user = User.create(first_name: 'Jim', last_name: 'Kim',
+        email: 'test@test.com', password: 'abcd1234', password_confirmation: 'abcd1234')
+      @session = @user.authenticate_with_credentials('test@test.com', 'abcd1234')
+      expect(@session).to eq @user
+    end
+
+    it 'unsuccessful authentication with incorrect password' do
+      @user = User.create(first_name: 'Jim', last_name: 'Kim',
+        email: 'test@test.com', password: 'abcd1234', password_confirmation: 'abcd1234')
+      @session = @user.authenticate_with_credentials('test@test.com', 'abcd1236')
+      expect(@session).to eq nil
+    end
   end
 
 end
