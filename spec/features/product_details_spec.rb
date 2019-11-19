@@ -16,7 +16,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     end
   end
 
-  scenario "They see all products" do
+  scenario "They see product details" do
     # visit products page
     visit root_path
     # click on one of the product partials in order to navigate directly to a product detail
@@ -25,6 +25,7 @@ RSpec.feature "ProductDetails", type: :feature, js: true do
     # commented out b/c it's for debugging only
     # save_and_open_screenshot
 
+    expect(current_path).to eq('/products/10')
     expect(page).to have_css 'article.product-detail', count: 1
   end
 

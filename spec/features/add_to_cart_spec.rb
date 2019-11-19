@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
+RSpec.feature "AddToCarts", type: :feature do
   # SETUP
   before :each do
     @category = Category.create! name: 'Apparel'
@@ -17,11 +17,15 @@ RSpec.feature "Visitor navigates to home page", type: :feature, js: true do
   end
 
   scenario "They see all products" do
+    # visit home page
     visit root_path
-
+    # click on 'Add to Cart' button for one of the products
+    first('article.product').click_on 'Add'
+    
     # commented out b/c it's for debugging only
     # save_and_open_screenshot
 
-    expect(page).to have_css 'article.product', count: 10
+    # check the text rendered in the top nav: should change from 'My Cart (0)' to 'My Cart (1)'
+    expect(page).to have_content('My Cart (1)')
   end
 end
