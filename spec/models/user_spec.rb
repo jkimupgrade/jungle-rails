@@ -89,6 +89,14 @@ RSpec.describe User, type: :model do
       
       expect(@session).to eq @user
     end
+
+    it 'successful authentication with valid credentials with wrong cases' do
+      @user = User.create(first_name: 'Jim', last_name: 'Kim',
+        email: 'test@test.COM', password: 'abcd1234', password_confirmation: 'abcd1234')
+      @session = @user.authenticate_with_credentials('TEST@test.com', 'abcd1234')
+      
+      expect(@session).to eq @user
+    end
   end
 
 end
