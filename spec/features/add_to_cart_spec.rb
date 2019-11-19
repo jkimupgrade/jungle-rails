@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "AddToCarts", type: :feature do
+RSpec.feature "AddToCarts", type: :feature, js: true do
   # SETUP
   before :each do
     @category = Category.create! name: 'Apparel'
@@ -16,7 +16,7 @@ RSpec.feature "AddToCarts", type: :feature do
     end
   end
 
-  scenario "They see all products" do
+  scenario "Adding a product to cart increases My Cart count" do
     # visit home page
     visit root_path
     # click on 'Add to Cart' button for one of the products
