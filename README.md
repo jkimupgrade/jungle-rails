@@ -3,13 +3,12 @@
 A mini e-commerce application built with `Rails 4.2` and tested with `RSpec`.
 
 ## Features
-- Add items to cart and checkout with `Stripe API`
-- Display a red 'Sold Out!' marker when product quantity is zero
-- Display active sale on every page (e.g. Black Friday)
-- Admin access control with `http_basic_authenticate_with`
-- Admin dashboard with counts of categories and products in database
-- Admin can create new categories and products
-- Admin can create new sales
+- `Payment with Stripe`: add items to cart and checkout
+- `Sold Out Badge`: display when product quantity is zero
+- `Active Sale`: display when there is an ongoing sale (e.g. Black Friday)
+- `Admin Control`: dashboard, add/list categories and products, create sales
+- `RESTful routes (resources)`: used with no unused routes exposed
+- `User Authentication`: cannot login with duplicate email (uniqueness validation); passwords encrypted using bcrypt for storage
 
 ## Screenshot
 !["main page"](/docs/main-page.png)
