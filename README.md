@@ -10,8 +10,8 @@ A mini e-commerce application built with `Rails 4.2` and tested with `RSpec`.
 - `RESTful routes (resources)`: used with no unused routes exposed
 - `User Authentication`: cannot login with duplicate email (uniqueness validation); passwords encrypted using bcrypt for storage
 
-## Screenshot
-!["main page"](/docs/main-page.png)
+## App in Action
+!["app animation"](/docs/add-to-cart-checkout.gif)
 
 ## Setup
 
